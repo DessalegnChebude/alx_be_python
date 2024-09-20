@@ -6,23 +6,17 @@ match priority:
     case "high":
         if time_bounded ==  "yes":
             print(f"Reminder : {task} is a high priority task that requires immediate attention today!")
-        elif time_bounded == "no":
-            print(f"Reminder : {task} is a high priority task but doesn't requires immediate attention.")
         else:
-            print("invalid input try again")
+            print(f"Reminder : {task} is a high priority task but doesn't requires immediate attention.")
     case "medium":
         if time_bounded == "yes":
             print(f"Reminder : {task} is a medium priority task that requires immediate attention today!")
-        elif time_bounded == "no":
-            print(f"Reminder : {task} is a medium priority task that doesn't requires immediate attention.")
         else:
-            print("invalid input try again")
+            print(f"Reminder : {task} is a medium priority task that doesn't requires immediate attention.")
     case "low":
         if time_bounded == "yes":
             print(f"Reminder : {task} is a low priority task that requires immediate attention today!")
-        elif time_bounded == "no":
-            print(f"Reminder : {task} is a low priority task. Consider completing it when you have free time.")
         else:
-            print("invalid input try again")
+            print(f"Reminder : {task} is a low priority task. Consider completing it when you have free time.")
     case _:
         print("invalid input try again")
