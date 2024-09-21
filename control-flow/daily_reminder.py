@@ -13,6 +13,9 @@ match priority:
         print(f"{task} is invalid Priority level")
     
 if time_bounded == "yes":
-    print(f"Reminde: {reminder}, It requires immediate attention today!")
+    reminder += " It requires immediate attention today!"
+    # print(f"Reminde: {reminder}, It requires immediate attention today!")
 else:
-    print(f"Reminder:  {reminder} Consider completing it when you have free time.")
+    reminder += " Consider completing it when you have free time."
+    # print(f"Reminder:  {reminder} Consider completing it when you have free time.")
+print(f"Reminder: {reminder}")
