@@ -13,10 +13,10 @@ def main():
 
         if choice == '1':
             # Prompt for and add an item
-            items = input("Enter the item to add:").lower()
-            shopping_list.append(items)
+            item = input("Enter the item to add: ").lower()
+            shopping_list.append(item)
             print(shopping_list)
-            pass
+            # pass
         elif choice == '2':
             # Prompt for and remove an item
             user_input = input("Enter your shoping item. ").lower()
@@ -25,7 +25,7 @@ def main():
                 print(f"shopping_list: {shopping_list}")
             else:
                 print("Item doesn't exist in the shoping list.")
-            pass
+            # pass
         elif choice == '3':
             # Display the shopping list
             if len(shopping_list) == 0:
@@ -33,7 +33,7 @@ def main():
             else:
                 for index, item in enumerate(shopping_list, start=1):
                     print(f'{index}. {item}')
-            pass
+            # pass
         elif choice == '4':
             print("Goodbye!")
             break
