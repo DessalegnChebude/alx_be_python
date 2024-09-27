@@ -1,33 +1,40 @@
 def display_menu():
-    print(f"Shoping List Manager")
-    print(f"1, Add Item")
-    print(f"2, Remove Item")
-    print(f"3, View List")
-    print(f"4, Exit")
+    print("\nShopping List Manager")
+    print("1. Add Item")
+    print("2. Remove Item")
+    print("3. View List")
+    print("4. Exit")
 
 def main():
-    shoping_list = []
+    shopping_list = []
     while True:
         display_menu()
-        choice = input("Enter your choice: ").lower()
-        if choice == "1":
+        choice = input("Enter your choice: ")
+
+        if choice == '1':
+            # Prompt for and add an item
             items = input("Enter your shoping itme. ").lower()
-            shoping_list.append(items)
-            print(shoping_list)
-        elif choice == "2":
+            shopping_list.append(items)
+            print(shopping_list)
+            pass
+        elif choice == '2':
+            # Prompt for and remove an item
             user_input = input("Enter your shoping item. ").lower()
-            if user_input in shoping_list:
-                shoping_list.remove(user_input)
-                print(f"Shoping_List: {shoping_list}")
+            if user_input in shopping_list:
+                shopping_list.remove(user_input)
+                print(f"shopping_list: {shopping_list}")
             else:
                 print("Item doesn't exist in the shoping list.")
-        elif choice == "3":
-            if len(shoping_list) == 0:
+            pass
+        elif choice == '3':
+            # Display the shopping list
+            if len(shopping_list) == 0:
                 print("Shoping list is empty")
             else:
-                for item in shoping_list:
-                    print(item)
-        elif choice == "4":
+                for index, item in enumerate(shopping_list, start=1):
+                    print(f'{index}. {item}')
+            pass
+        elif choice == '4':
             print("Goodbye!")
             break
         else:
