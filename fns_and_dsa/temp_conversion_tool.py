@@ -27,7 +27,7 @@ while True:
             print("Invalid Input pls ")
 
     except ValueError:
-        print("Invalid input. Please enter a valid integer.")
+        print("Invalid temperature. Please enter a numeric value.")
     
 
 
