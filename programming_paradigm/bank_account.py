@@ -8,7 +8,8 @@ class BankAccount:
 
     def withdraw(self, amount):
         if self.account_balance > amount:
-            return True
+            self.account_balance -= amount
+            return self.account_balance
         else:
             return False
 
