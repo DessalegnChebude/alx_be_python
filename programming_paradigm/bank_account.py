@@ -3,7 +3,7 @@ class BankAccount:
         self.account_balance = account_balance = 0
 
     def deposit(self, amount):
-        # self.account_balance += amount
+        self.account_balance += amount
         return self.account_balance
 
     def withdraw(self, amount):
