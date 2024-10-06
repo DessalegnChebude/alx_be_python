@@ -5,13 +5,12 @@ def main():
     if len(sys.argv) != 3:
         print("Usage: python main.py <numerator> <denominator")
         sys.exit(1)
-    else:
-        try:
-            numerator = float(sys.argv[1])
-            denominator = float(sys.argv[2])
-            result = safe_divide(numerator, denominator)
-            print(result)
-        except ValueError:
-            print("Error: Please provide valid integer numbers as arguments.")
+
+    numerator = sys.argv[1]
+    denominator = sys.argv[2]
+
+    result = safe_divide(numerator, denominator)
+    print(result)
+
 if __name__ == "__main__":
     main()
