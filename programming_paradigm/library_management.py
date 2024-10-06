@@ -22,14 +22,14 @@ class Book:
 
 class Library:
     def __init__(self):
-        self._book = []   # Private list to store books.
+        self._books = []   # Private list to store books.
 
     def add_book(self, book):
-        self._book.append(book)  #adding book to library.
+        self._books.append(book)  #adding book to library.
     
 
     def check_out_book(self, title):
-        for book in self._book:
+        for book in self._books:
             if book.title == title:
                 if book.check_out():
                     print(f"Book '{title}' has been checked out.")
@@ -41,7 +41,7 @@ class Library:
         return False
 
     def return_book(self, title):
-        for book in self._book:
+        for book in self._books:
             if book.title == title:
                 if book.return_book():
                     print(f"Book '{title}' has been returned.")
@@ -53,7 +53,7 @@ class Library:
         return False
     
     def list_available_books(self):
-        avalable_books = [book.title for book in self._book if book.is_available()]
+        avalable_books = [book.title for book in self._books if book.is_available()]
         if avalable_books:
             print("Available books:")
             for title in avalable_books:
